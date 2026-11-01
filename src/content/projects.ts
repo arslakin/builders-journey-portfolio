@@ -1,0 +1,13 @@
+import { placeholderProjectLinkLabel, type PlaceholderProjectLink, type ProjectRecord } from '../domain/project.ts';
+import { sourcedText, projectSource } from './provenance.ts';
+export const placeholderProjectLink = Object.freeze({kind:'placeholder',label:placeholderProjectLinkLabel}) satisfies PlaceholderProjectLink;
+const text = (value: string) => sourcedText(value, projectSource);
+// Status is explicit in each description. No unverified URLs or outcome metrics.
+export const projectRecords: readonly ProjectRecord[] = Object.freeze([
+ {id:'rojkilim',name:text('RojKilim'),description:text('My kilim business under Roj Collective LLC connects entrepreneurship with weaving traditions and cultural storytelling.'),technologies:[text('E-commerce'),text('Cultural storytelling'),text('Entrepreneurship')],link:placeholderProjectLink},
+ {id:'reya-sine',name:text('Rêya Sine Atlas'),description:text('In development for the AWS Map It Weekend Challenge: an interactive atlas exploring weaving traditions in Sine/Sanandaj, Wan/Van and Colemêrg/Hakkâri. Research citations and uncertainty labels keep cultural connections distinct from unproven historic routes.'),technologies:[text('React'),text('TypeScript'),text('Vite'),text('MapLibre')],link:placeholderProjectLink},
+ {id:'dengbej',name:text('Dengbej AI'),description:text('A Kurdish news and audio application exploring serverless RSS ingestion, AI summaries and audio delivery. Experimental project; public deployment status is not asserted here.'),technologies:[text('Python'),text('AWS Lambda'),text('Amazon Bedrock'),text('DynamoDB'),text('Amazon S3')],link:placeholderProjectLink},
+ {id:'rojanda',name:text('RojAnda'),description:text('A learning application in development, with a React Native/Expo prototype for lecture summaries, flashcards and quizzes, plus a separate Python/AWS SAM backend implementation. Local mock services are part of the prototype.'),technologies:[text('React Native'),text('Expo'),text('Python'),text('AWS SAM')],link:placeholderProjectLink},
+ {id:'rojai',name:text('RojAI'),description:text('A Shopify catalog-quality application in development, using TypeScript and Shopify GraphQL to explore product issues, with PostgreSQL and Prisma data models.'),technologies:[text('TypeScript'),text('Shopify GraphQL'),text('PostgreSQL'),text('Prisma')],link:placeholderProjectLink},
+ {id:'rojber',name:text('RojBer'),description:text('A multilingual mentoring prototype for students and early-career builders. Strands Decider selects a mentoring strategy in the local implementation; cloud deployment and live Bedrock replies remain unverified.'),technologies:[text('Strands Decider'),text('Python'),text('Expo')],link:placeholderProjectLink}
+]);

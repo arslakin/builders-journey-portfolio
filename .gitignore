@@ -1,0 +1,46 @@
+# Dependencies
+node_modules/
+
+# Production build output
+dist/
+
+# TypeScript incremental build metadata
+*.tsbuildinfo
+
+# Logs
+npm-debug.log*
+*.log
+
+# Operating system and editor files
+.DS_Store
+
+# Environment files and local overrides
+# Real environment files stay untracked in every mode, including .env,
+# .env.local, .env.development, .env.development.local, .env.production,
+# and .env.production.local. Any *.local override is also ignored.
+# Documented placeholder examples (*.example) stay trackable; add one only
+# when a reviewed change introduces a required public variable.
+.env
+.env.*
+*.local
+!*.example
+
+# Test and browser-test artifacts
+coverage/
+test-results/
+playwright-report/
+blob-report/
+
+# Internal workflow metadata and private source documents
+.kiro/
+*.pdf
+*.doc
+*.docx
+
+# Credential and signing material
+.aws/
+credentials
+*.pem
+*.key
+*.p12
+*.pfx

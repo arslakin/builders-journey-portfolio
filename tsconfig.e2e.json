@@ -1,0 +1,9 @@
+{
+  /* Playwright config and browser tests: Node test runner plus DOM types for page callbacks. */
+  "extends": "./tsconfig.node.json",
+  "compilerOptions": {
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.e2e.tsbuildinfo",
+    "lib": ["ES2023", "DOM"]
+  },
+  "include": ["playwright.config.ts", "e2e"]
+}
